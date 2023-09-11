@@ -3,10 +3,35 @@ static VARIAVEL_GLOBAL:u8 = 1;
 static mut VARIAVEL_GLOBAL_INSEGURA:u8 = 2;
 
 fn main() {
-    // testes_var();
-    // sombra();
+    testes_var();
+    sombra();
 
     println!("Soma = {}", soma(2, 2));
+
+    condicionais();
+}
+
+fn condicionais() {
+
+    let idade:u8 = 18;
+    let responsavel_autorizou = true;
+    let bool_maior = idade >= 18;
+
+    if bool_maior {
+        println!("Pode entrar na balada");
+    }
+
+    else if idade >= 16 && responsavel_autorizou {
+        println!("Pode entrar na balada com permissão do responsável");
+    }
+
+    else {
+        println!("Não pode entrar na balada!");
+    }
+
+    let condicao = if bool_maior { "maior" } else { "menor" };
+
+    println!("É {} de idade!", condicao);
 }
 
 
@@ -55,8 +80,8 @@ fn testes_var() {
     let decimal:f32 = 2.5;
     println!("Decimal = {}", decimal);
 
-    let mut booleana = false;
-    booleana = true;
+    let booleana = false;
+    // booleana = true;
     println!("Booleana = {}, Tamanho = {} bytes", booleana, std::mem::size_of_val(&booleana));
 
     let letra:char = 'C';
