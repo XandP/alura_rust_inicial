@@ -3,10 +3,20 @@ static VARIAVEL_GLOBAL:u8 = 1;
 static mut VARIAVEL_GLOBAL_INSEGURA:u8 = 2;
 
 fn main() {
-    testes_var();
-    sombra();
-    //  println!("Tamanho char = {}", std::mem::size_of_val(&letra));
+    // testes_var();
+    // sombra();
+
+    println!("Soma = {}", soma(2, 2));
 }
+
+
+fn soma(a:i32, b:i32) -> i32
+{
+    println!("{} + {} = {}", a, b , a + b);
+
+    a + b
+}
+
 
 
 fn sombra() {
