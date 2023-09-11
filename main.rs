@@ -40,6 +40,10 @@ fn repeticoes() {
             break;
         }
     }
+
+    for j in 1..=10 {
+        println!("{} X {} = {}", multiplicador, j, multiplicador * j);
+    }
 }
 
 
