@@ -9,7 +9,39 @@ fn main() {
     println!("Soma = {}", soma(2, 2));
 
     condicionais();
+    repeticoes();
 }
+
+
+fn repeticoes() {
+
+    let multiplicador:u8 = 5;
+
+    let mut i:u8 = 0;
+
+    while i < 10 {
+        i += 1;
+
+        if i == 5 {
+            continue;
+        }
+
+        println!("{} X {} = {}", multiplicador, i, multiplicador * i);
+    }
+
+
+    i = 0;
+
+    loop {
+        i += 1;
+        println!("{} X {} = {}", multiplicador, i, multiplicador * i);
+
+        if i >= 10 {
+            break;
+        }
+    }
+}
+
 
 fn condicionais() {
 
@@ -43,7 +75,6 @@ fn soma(a:i32, b:i32) -> i32
 }
 
 
-
 fn sombra() {
     let a = 123;
 
@@ -60,6 +91,7 @@ fn sombra() {
     println!("a = {}", a);
     // println!("b = {}", b);
 }
+
 
 fn testes_var() {
 
