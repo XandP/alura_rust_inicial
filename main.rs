@@ -10,6 +10,23 @@ fn main() {
 
     condicionais();
     repeticoes();
+
+
+    match_statements();
+}
+
+fn match_statements() {
+    let linguagem = "PHP";
+
+    let proposito = match linguagem{
+        "PHP" => "Web",
+        "Kotlin" => "Android",
+        "Python" => "Data Science",
+        _ => "Desconhecido"
+    };
+
+
+    println!("O proposito de {} eh {}", linguagem, proposito)
 }
 
 
